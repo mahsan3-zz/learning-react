@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dced65b9-24be-44f3-8d03-076fcd07ed64" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +26,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -48,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581235350998</updated>
-      <workItem from="1581235361472" duration="1670000" />
+      <workItem from="1581235361472" duration="3453000" />
     </task>
     <task id="LOCAL-00001" summary="Create react app using create-react-app">
       <created>1581235696693</created>
@@ -57,7 +64,21 @@
       <option name="project" value="LOCAL" />
       <updated>1581235696693</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Setup git pages">
+      <created>1581237086131</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581237086131</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Testing change for deploy script">
+      <created>1581237221459</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581237221459</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,20 +97,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create react app using create-react-app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create react app using create-react-app" />
+    <MESSAGE value="Setup git pages" />
+    <MESSAGE value="Testing change for deploy script" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing change for deploy script" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1581235695983">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1581237220978">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581235695983" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581237220978" />
     <state x="788" y="224" key="VCS.ChangeListViewerDialog" timestamp="1581235707671">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="788" y="224" key="VCS.ChangeListViewerDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581235707671" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1581235904625">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1581237225095">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581235904625" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581237225095" />
   </component>
 </project>
