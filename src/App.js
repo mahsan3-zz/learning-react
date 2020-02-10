@@ -1,28 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
+import Navigation from "./Navigation/Navigation";
+import Home from "./containers/home/Home";
+import {BrowserRouter, Route} from "react-router-dom";
+import Coffee from "./Coffee/Coffee";
 
 function App() {
   return (
-    <div className="App">
-        <div className="alert alert-primary" role="alert">
-        A simple primary alert—check it out!
-    </div>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+          <div className="container h-100">
+              <div className="d-flex flex-column h-100">
+                  <div className="row">
+                      <div className="col col-12">
+                          <Navigation/>
+                      </div>
+                  </div>
+                  <div className="row flex-grow-1">
+                      <div className="col col-12">
+                          <Route exact path="/" component={Home}></Route>
+                          <Route exact path="/coffee" component={Coffee}></Route>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </BrowserRouter>
   );
 }
 
