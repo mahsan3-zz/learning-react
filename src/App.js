@@ -7,7 +7,7 @@ import Coffee from "./Coffee/Coffee";
 
 function App() {
   return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
           <div className="container h-100">
               <div className="d-flex flex-column h-100">
                   <div className="row">
