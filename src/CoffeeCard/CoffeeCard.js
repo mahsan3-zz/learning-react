@@ -9,10 +9,10 @@ class CoffeeCard extends React.Component {
             selected: false
         };
 
-        this.updateName = this.updateName.bind(this);
+        this.toggleLike = this.toggleLike.bind(this);
     }
 
-    updateName() {
+    toggleLike() {
         this.setState(state => ({
             selected: !state.selected
         }));
@@ -27,8 +27,8 @@ class CoffeeCard extends React.Component {
                     <p className="card-text">
                         {this.state.coffeeObj.description}
                     </p>
-                    <button className="btn btn-primary" onClick={this.updateName}>
-                        Like {this.state.selected ? <img src="/icons/check.svg" alt="" width="32" height="32" title="Bootstrap" />: ''}
+                    <button className="btn btn-primary" onClick={this.toggleLike}>
+                        Like {this.state.selected ? <img src="/icons/check.svg" alt="" width="32" height="32" title="check" />: ''}
 
                     </button>
                 </div>
