@@ -28,7 +28,7 @@ class CoffeeCard extends React.Component {
                         {this.state.coffeeObj.description}
                     </p>
                     <button className="btn btn-primary" onClick={this.toggleLike}>
-                        Like {this.state.selected ? <img src="/icons/check.svg" alt="" width="32" height="32" title="check" />: ''}
+                        Like {this.state.selected ? <img src="icons/check.svg" alt="" width="32" height="32" title="check" />: ''}
 
                     </button>
                 </div>
