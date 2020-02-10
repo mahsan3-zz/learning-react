@@ -7,6 +7,7 @@ import Coffee from "./Coffee/Coffee";
 import {Provider} from "react-redux";
 import { createStore } from "redux";
 import appReducer from "./store/app.reducer";
+import NewItem from "./NewItem/NewItem";
 
 const store = createStore(
     appReducer,
@@ -30,6 +31,7 @@ function App() {
                           <div className="col col-12">
                               <Route exact path="/" component={Home}></Route>
                               <Route exact path="/coffee" component={Coffee}></Route>
+                              <Route exact path="/new-coffee-item" component={NewItem}></Route>
                           </div>
                       </div>
                   </div>
