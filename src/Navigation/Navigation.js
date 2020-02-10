@@ -13,13 +13,9 @@ function Navigation() {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Link</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Link</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
+                        <Link to="/new-coffee-item">
+                            <span className="nav-link">New Coffee</span>
+                        </Link>
                     </li>
                 </ul>
             </div>
