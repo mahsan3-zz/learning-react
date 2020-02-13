@@ -1,4 +1,4 @@
-import {ADD_COFFEE} from "./app.actions";
+import {ADD_COFFEE} from "../actions/app.actions";
 
 const initialState = {
     coffeeItems: []

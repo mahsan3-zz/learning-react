@@ -1,6 +1,6 @@
 import React from "react";
 import NewItemForm from "./NewItemForm";
-import {addCoffee} from "../store/app.actions";
+import {addCoffee} from "../store/actions/app.actions";
 import {connect} from "react-redux";
 
 // Should have called this 'NewItemContainer'
