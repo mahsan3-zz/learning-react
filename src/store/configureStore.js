@@ -1,19 +1,27 @@
 import {createStore, applyMiddleware, compose} from "redux";
-import rootReducer from "./reducers";
+import {rootEpic, rootReducer} from "./reducers";
+import { createEpicMiddleware } from 'redux-observable';
 import reduxImmutableStateInvariant from "redux-immutable-state-invariant";
 
 
+const epicMiddleware = createEpicMiddleware();
+
 export default function configureStore(initialStore) {
-    // It's like ng-freeze
+    // It's like ng-freeze, will tell you during development if you actually try and mutate state
     const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-    return createStore(
+    const store = createStore(
         rootReducer,
         initialStore,
         composeEnhancers(applyMiddleware(
-            reduxImmutableStateInvariant()
+            reduxImmutableStateInvariant(),
+            epicMiddleware
         ))
     );
+
+    epicMiddleware.run(rootEpic);
+
+    return store;
 
 }
 
