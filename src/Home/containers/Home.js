@@ -1,7 +1,7 @@
 import React from "react";
 import SecuritiesSearchForm from "../components/SecuritiesSearchForm";
 import {connect} from "react-redux";
-import {searchSecurities} from "../../store/actions/securities.actions";
+import {favoriteSymbol, searchSecurities, unfavoriteSymbol} from "../../store/actions/securities.actions";
 import SearchResults from "../components/SearchResults";
 
 function Home(props) {
@@ -9,6 +9,12 @@ function Home(props) {
     const updateSearchResults = q => {
         console.log(`The query is ${q}`);
         props.search(q);
+    };
+
+    const toggleSymbolToFav = (symbol, isFav) => {
+        console.log(`You just favorited ${symbol} and fav status is ${isFav}`);
+        if(!isFav) props.favSymbol(symbol);
+        else props.unfavSymbol(symbol);
     };
 
     return (
@@ -28,11 +34,12 @@ function Home(props) {
 
             <div className="row flex-column align-items-center mb-4">
                 <div className="col col-md-8 col-lg-6 text-center justify-content-center">
-                {
-                    props.isLoading ?
-                        <span>...Loading...</span> :
-                        <SearchResults securitiesList={props.securitiesList} />
-                }
+                    {
+                        props.isLoading ?
+                            <span>...Loading...</span> :
+                            <SearchResults securitiesList={props.securitiesList}
+                                           toggleFav={toggleSymbolToFav}/>
+                    }
                 </div>
             </div>
 
@@ -43,7 +50,12 @@ function Home(props) {
 // Wire up this component to the store
 function mapStateToProps(state) {
     return {
-        securitiesList: state.searchReducer.searchResults,
+        securitiesList: state.searchReducer.searchResults.map(item => {
+            return {
+                ...item,
+                isFavorite: state.searchReducer.favSymbols.includes(item['1. symbol'])
+            }
+        }),
         isLoading: state.searchReducer.isLoading
     }
 }
@@ -51,7 +63,9 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
 
     return {
-      search: q => dispatch(searchSecurities(q))
+      search: q => dispatch(searchSecurities(q)),
+      favSymbol: s => dispatch(favoriteSymbol(s)),
+      unfavSymbol: s => dispatch(unfavoriteSymbol(s)),
     };
 
 }
