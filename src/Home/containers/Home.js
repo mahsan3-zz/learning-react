@@ -19,12 +19,16 @@ function Home(props) {
 
     return (
         <>
-            <div className="jumbotron">
+            <div className="jumbotron p-2">
 
                 <h1 className="display-4">Securities Search</h1>
-                <p className="lead">
-                    Simple React application that integrates with the Alphavantage API
-                </p>
+                <div className="d-flex justify-content-between flex-wrap">
+                    <p className="lead">
+                        Simple React application that integrates with the Alphavantage API
+                    </p>
+                    <button type="button" className="btn btn-outline-primary">My Favorites ({props.totalFavorites})</button>
+                </div>
+
 
                 <hr className="my-4" />
 
@@ -50,6 +54,7 @@ function Home(props) {
 // Wire up this component to the store
 function mapStateToProps(state) {
     return {
+        totalFavorites: state.searchReducer.favSymbols.length,
         securitiesList: state.searchReducer.searchResults.map(item => {
             return {
                 ...item,
