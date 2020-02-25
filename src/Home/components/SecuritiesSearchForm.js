@@ -22,7 +22,7 @@ export default function SecuritiesSearchForm (props) {
     };
 
     return (
-        <form className="" onSubmit={handleSubmit} autocomplete="off">
+        <form className="" onSubmit={handleSubmit} autoComplete="off">
 
             <div className="form-group">
                 <label htmlFor="searchInput">Search security by name</label>
