@@ -5,6 +5,7 @@ import Home from "./Home/containers/Home";
 import {BrowserRouter, Route} from "react-router-dom";
 import Coffee from "./Coffee/Coffee";
 import NewItem from "./NewItem/NewItem";
+import FavoriteSecurities from "./Home/containers/FavoriteSecurities";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
                   <div className="row flex-grow-1 pt-2">
                       <div className="col col-12">
                           <Route exact path="/" component={Home}></Route>
-                          <Route exact path="/coffee" component={Coffee}></Route>
+                          <Route exact path="/favorites" component={FavoriteSecurities}></Route>
                           <Route exact path="/new-coffee-item" component={NewItem}></Route>
                       </div>
                   </div>

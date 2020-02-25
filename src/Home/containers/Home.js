@@ -27,7 +27,7 @@ function Home(props) {
                     <p className="lead">
                         Simple React application that integrates with the <a href="https://www.alphavantage.co" target="_blank">Alphavantage API</a>
                     </p>
-                    <Link to="/coffee">
+                    <Link to="/favorites">
                         <button type="button" className="btn btn-outline-primary">
                             My Favorites ({props.totalFavorites})
                         </button>
