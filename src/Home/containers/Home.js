@@ -3,6 +3,7 @@ import SecuritiesSearchForm from "../components/SecuritiesSearchForm";
 import {connect} from "react-redux";
 import {favoriteSymbol, searchSecurities, unfavoriteSymbol} from "../../store/actions/securities.actions";
 import SearchResults from "../components/SearchResults";
+import {Link} from "react-router-dom";
 
 function Home(props) {
 
@@ -24,9 +25,13 @@ function Home(props) {
                 <h1 className="display-4">Securities Search</h1>
                 <div className="d-flex justify-content-between flex-wrap">
                     <p className="lead">
-                        Simple React application that integrates with the Alphavantage API
+                        Simple React application that integrates with the <a href="https://www.alphavantage.co" target="_blank">Alphavantage API</a>
                     </p>
-                    <button type="button" className="btn btn-outline-primary">My Favorites ({props.totalFavorites})</button>
+                    <Link to="/coffee">
+                        <button type="button" className="btn btn-outline-primary">
+                            My Favorites ({props.totalFavorites})
+                        </button>
+                    </Link>
                 </div>
 
 
