@@ -1,12 +1,10 @@
-import React, {useState, useEffect, useRef} from "react";
+import React from "react";
 import SecuritiesSearchForm from "../components/SecuritiesSearchForm";
 import {connect} from "react-redux";
 import {searchSecurities} from "../../store/actions/securities.actions";
 import SearchResults from "../components/SearchResults";
 
 function Home(props) {
-
-    useEffect(() => {}, []);
 
     const updateSearchResults = q => {
         console.log(`The query is ${q}`);
@@ -28,11 +26,11 @@ function Home(props) {
 
             </div>
 
-            <div className="row">
-                <div className="col text-center">
+            <div className="row flex-column align-items-center mb-4">
+                <div className="col col-md-8 col-lg-6 text-center justify-content-center">
                 {
                     props.isLoading ?
-                        <span>Loading</span> :
+                        <span>...Loading...</span> :
                         <SearchResults securitiesList={props.securitiesList} />
                 }
                 </div>
@@ -42,7 +40,7 @@ function Home(props) {
     );
 }
 
-
+// Wire up this component to the store
 function mapStateToProps(state) {
     return {
         securitiesList: state.searchReducer.searchResults,
