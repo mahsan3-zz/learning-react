@@ -14,10 +14,10 @@ function App() {
               <div className="d-flex flex-column h-100">
                   <div className="row">
                       <div className="col col-12">
-                          <Navigation/>
+                          {/*<Navigation/>*/}
                       </div>
                   </div>
-                  <div className="row flex-grow-1">
+                  <div className="row flex-grow-1 pt-2">
                       <div className="col col-12">
                           <Route exact path="/" component={Home}></Route>
                           <Route exact path="/coffee" component={Coffee}></Route>
