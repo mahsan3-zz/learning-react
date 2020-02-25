@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Navigation from "./Navigation/Navigation";
-import Home from "./containers/home/Home";
+import Home from "./Home/containers/Home";
 import {BrowserRouter, Route} from "react-router-dom";
 import Coffee from "./Coffee/Coffee";
 import NewItem from "./NewItem/NewItem";

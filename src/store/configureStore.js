@@ -3,7 +3,6 @@ import {rootEpic, rootReducer} from "./reducers";
 import { createEpicMiddleware } from 'redux-observable';
 import reduxImmutableStateInvariant from "redux-immutable-state-invariant";
 
-
 const epicMiddleware = createEpicMiddleware();
 
 export default function configureStore(initialStore) {
