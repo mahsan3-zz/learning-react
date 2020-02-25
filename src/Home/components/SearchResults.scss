@@ -1,0 +1,7 @@
+.fav-icon {
+  cursor: pointer;
+
+  &.selected {
+    color: red;
+  }
+}
