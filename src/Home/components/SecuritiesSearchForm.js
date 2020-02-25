@@ -25,13 +25,13 @@ export default function SecuritiesSearchForm (props) {
         <form className="" onSubmit={handleSubmit} autoComplete="off">
 
             <div className="form-group">
-                <label htmlFor="searchInput">Search security by name</label>
+                <label htmlFor="searchInput">Search name</label>
 
                 <input type="text" className="form-control" id="searchInput"
                        onChange={e => setSearchQuery(e.target.value)} ref={inputEl} />
 
                 <small id="searchHelp" className="form-text text-muted">
-                    Example: search by company name or stock symbol
+                    Example: apple, aapl, boeing...
                 </small>
             </div>
 
