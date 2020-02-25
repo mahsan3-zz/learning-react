@@ -1,6 +1,12 @@
-import {SEARCH_SECURITIES, UPDATE_SECURITIES_RESULT} from "../actions/securities.actions";
+import {
+    FAVORITE_SYMBOL,
+    SEARCH_SECURITIES,
+    UNFAVORITE_SYMBOL,
+    UPDATE_SECURITIES_RESULT
+} from "../actions/securities.actions";
 
 const initialState = {
+    favSymbols: [],
     isLoading: false,
     searchResults: []
 };
@@ -18,6 +24,18 @@ export default function searchReducer(state = initialState, action) {
                 ...state,
                 isLoading: false,
                 searchResults: action.payload
+            };
+        case FAVORITE_SYMBOL:
+            return {
+                ...state,
+                favSymbols: [...state.favSymbols, action.payload]
+            };
+        case UNFAVORITE_SYMBOL:
+            return {
+                ...state,
+                favSymbols: state.favSymbols.filter(s => {
+                    if(action.payload !== s) return s;
+                })
             };
         default:
             return state;
